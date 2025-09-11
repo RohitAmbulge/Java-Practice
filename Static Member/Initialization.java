@@ -4,7 +4,7 @@ public class Initialization {
 
     static Scanner sc = new Scanner(System.in);
     static int addition = sc.nextInt() + sc.nextInt();
-    ;/static int addition2;
+    static int addition2;
 
     static {
         Scanner sc = new Scanner(System.in);
