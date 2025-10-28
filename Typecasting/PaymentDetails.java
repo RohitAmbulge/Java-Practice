@@ -40,7 +40,8 @@ class Payment {
 
     public void paymentMethod(Payment obj) {
         if (obj instanceof PhonePay) {
-
+            PhonePay obj1 = (PhonePay) obj;
+            System.out.println(obj.paymentOption);
         }
     }
 }
