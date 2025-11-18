@@ -49,6 +49,6 @@ public class ShapeCalculatorDriver {
     public static void main(String[] args) {
         shapeCalculator obj = new CalculatorImpl();
         obj.areaOfCircle(4);
-        obj.message("rohit");
+        // obj.message("rohit");
     }
 }
