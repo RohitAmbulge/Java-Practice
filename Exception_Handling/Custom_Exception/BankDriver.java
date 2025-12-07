@@ -55,7 +55,7 @@ public class BankDriver {
         Bank bank = new Bank("Ramesh", "123", 2000);
 
         for (;;) {
-            System.out.println("WelCome to bank");
+            System.out.println("WelCOme to Laxmi Chit fund Bank");
             System.out.println("1. Deposit");
             System.out.println("2. Withdraw");
             System.out.println("3. Check Balance");
