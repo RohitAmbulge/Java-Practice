@@ -1,5 +1,5 @@
 class Feature {
-    public static int division(int num1, int num2) throws Exception {
+    public static int division(int num1, int num2) throws ArithmeticException {
         int op = num1 / num2;
         return op;
     }

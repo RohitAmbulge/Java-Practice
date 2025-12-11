@@ -10,6 +10,7 @@ public class Iterate {
                 int a = arr[i];
                 len++;
             } catch (ArrayIndexOutOfBoundsException e) {
+                // System.out.println("Handeled");
                 break;
             }
         }
