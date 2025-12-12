@@ -18,9 +18,15 @@ public class Iterate3 {
         System.out.println();
         System.out.println("Using do while");
         int k = 0;
-        do { // 2
+        do { // 2 3 5 7 8
             System.out.print(arr[k] + " ");
-            k++;// 1
-        } while (k < arr.length);
+            k++;// 1 2 3 4
+        } while (k < arr.length);// 5
+
+        System.out.println();
+        System.out.println("Using for each");
+        for (int ele : arr) {
+            System.out.print(ele + " ");
+        }
     }
 }
