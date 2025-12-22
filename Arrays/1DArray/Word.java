@@ -110,7 +110,7 @@ public class Word {
 
     }
 
-    public static int maxRepeatingEle(char[] ch) {
+    public static char maxRepeatingEle(char[] ch) {
 
         int max = Integer.MIN_VALUE;
         char ele = 0;
@@ -131,7 +131,7 @@ public class Word {
         return ele;
     }
 
-    public static int minRepeatingEle(char[] ch) {
+    public static char minRepeatingEle(char[] ch) {
         int min = Integer.MAX_VALUE;
         char minEle = 0;
         for (int i = 0; i < ch.length; i++) {
