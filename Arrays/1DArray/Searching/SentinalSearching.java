@@ -24,12 +24,12 @@ public class SentinalSearching {
         while (arr[i] != key)
             i++;
 
-        arr[n - 1] = last;
+        // arr[n - 1] = last;
 
-        if (i < n && arr[i] == key)
+        if (i < n - 1 && last == key)
             return i;
-        else
-            return -1;
+
+        return -1;
     }
 
     // public static int sentinalRecursion(int[] arr, int n, int ind, int key) {

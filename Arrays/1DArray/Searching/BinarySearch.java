@@ -6,13 +6,14 @@ public class BinarySearch {
         int[] arr = new int[20];
 
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * 100);
+            arr[i] = i + 1;
         }
 
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
-        System.out.println("Ele found at : " + usingIterativeApproach(arr, 25));
+        System.out.println("Ele found at : " + usingIterativeApproach(arr, 15));
+        System.out.println("Rec : " + usingRecursiveApp(arr, 0, arr.length - 1, 7));
     }
 
     public static int usingIterativeApproach(int[] arr, int key) {
@@ -42,9 +43,9 @@ public class BinarySearch {
         if (arr[mid] == key)
             return mid;
         else if (key > arr[mid]) {
-            usingRecursiveApp(arr, mid + 1, max, key);
+            return usingRecursiveApp(arr, mid + 1, max, key);
         } else {
-            usingRecursiveApp(arr, min, mid - 1, key);
+            return usingRecursiveApp(arr, min, mid - 1, key);
         }
 
     }
