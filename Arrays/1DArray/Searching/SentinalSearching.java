@@ -9,7 +9,7 @@ public class SentinalSearching {
             arr[i] = i + 1;
         }
 
-        int key = 20;
+        int key = 21;
         System.out.println(Arrays.toString(arr));
         int pos = sentinalSearch(arr, arr.length, key);
         System.out.println(pos);
@@ -26,7 +26,7 @@ public class SentinalSearching {
 
         // arr[n - 1] = last;
 
-        if (i < n - 1 && last == key)
+        if (i < n - 1 || last == key)
             return i;
 
         return -1;

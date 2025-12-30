@@ -9,12 +9,13 @@ public class ExponentialSearch {
         }
 
         System.out.println(Arrays.toString(arr));
-        int key = 8;
-        int pos = exponentialSearchUsingIterative(arr, arr.length - 1, key);
-        System.out.println(pos);
+        int key = 6;
+        // int pos = exponentialSearchUsingIterative(arr, arr.length - 1, key);
+        // // int pos = exponentialSearchUsingRec(arr, key, 0);
+        // System.out.println(pos);
 
-        // int pos2 = exponentialSearchUsingRec(arr, key, 1);
-        // System.out.println(pos2);
+        int pos2 = exponentialSearchUsingRec(arr, key, 1);
+        System.out.println(pos2);
     }
 
     public static int exponentialSearchUsingIterative(int[] arr, int n, int key) {
@@ -40,8 +41,7 @@ public class ExponentialSearch {
             } else {
                 low = mid + 1;
             }
-            low++;
-            high--;
+
         }
 
         return -1;
