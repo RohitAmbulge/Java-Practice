@@ -17,10 +17,10 @@ class Marker {
 public class ObjectSort {
 
     public static void main(String[] args) {
-        Marker m1 = new Marker("Camlin", "Black", 25.00);
-        Marker m2 = new Marker("Doms", "Blue", 25.15);
-        Marker m3 = new Marker("Camlin", "Red", 25.75);
-        Marker m4 = new Marker("Doms", "Green", 25.90);
+        Marker m1 = new Marker("Camlin", "Black", 25.15);
+        Marker m2 = new Marker("Doms", "Blue", 25.00);
+        Marker m3 = new Marker("Camlin", "Red", 25.90);
+        Marker m4 = new Marker("Doms", "Green", 25.75);
 
         Marker[] markers = { m1, m2, m3, m4 };
 
@@ -70,7 +70,7 @@ public class ObjectSort {
     public static void brandDescending(Marker[] arr, int n) {
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
-                if ((arr[i].brand.compareTo(arr[j].brand)) > 0) {
+                if ((arr[i].brand.compareTo(arr[j].brand)) < 0) {
                     Marker temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;

@@ -38,10 +38,8 @@ public class SelectionSort {
         }
 
         if (arr[min] > arr[j]) {
-            min = j;
+            innerIteration(arr, j + 1, i, j);
         }
-
-        innerIteration(arr, j + 1, i, min);
 
     }
 
