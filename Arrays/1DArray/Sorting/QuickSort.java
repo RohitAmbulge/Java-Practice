@@ -10,19 +10,19 @@ public class QuickSort {
     }
 
     public static void quickSort(int[] arr, int start, int end) {
-        if (end < start)
+        if (start > end)
             return;
         int pivotIndex = partition(arr, start, end);
         quickSort(arr, start, pivotIndex - 1);
-        quickSort(arr, pivotIndex, end);
+        quickSort(arr, pivotIndex + 1, end);
     }
 
     public static int partition(int[] arr, int start, int end) {
         int pivot = arr[end];
         int j = start - 1;
 
-        for (int i = start; i < end; i++) {
-            if (arr[i] < arr[pivot]) {
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < pivot) {
                 j++;
                 int temp = arr[i];
                 arr[i] = arr[j];
