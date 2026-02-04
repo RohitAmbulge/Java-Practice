@@ -12,7 +12,7 @@ class UserIndexOutOfBoundsException extends RuntimeException{
     }
 }
 
-class UserLinkedList<E>{
+class UserLinkedList<E> implements Cloneable{
     private int index;
     private Node head;
     private Node tail;
@@ -135,6 +135,76 @@ class UserLinkedList<E>{
         curr.next = newNode;
         idx++;
     }
+
+    public E remove(int idx){
+        if(idx < 0 || idx > size()){
+            throw new UserIndexOutOfBoundsException("Index : "+idx+", Size : "+size());
+        }
+
+        if(idx == 0)return removeFirst();
+
+        Node curr = head;
+        for(int i=1;i<idx-1;i++){
+            curr = curr.next;
+        }
+        Node curr2 = curr.next;
+        E temp = curr2.ele;
+        curr.next = curr2.next;
+        
+        curr2.next = null;
+        index--;
+        return temp;
+
+    }
+
+    public E remove(){
+        return removeLast();
+    }
+
+    public void clear(){
+        while(!isEmpty())removeFirst();
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+    public void addAll(UserLinkedList<E> list){
+
+    }
+
+    public E get(int indx){
+        if(indx < 0 || indx > size()){
+            throw new UserIndexOutOfBoundsException("index Invalid");
+        }
+
+        if(indx == size()-1){
+            return getLast();
+        }
+
+        int i= 1;
+        Node curr = head;
+        while(curr.next != null){
+            if(i == indx)return curr.ele;
+            i++;
+            curr = curr.next;
+        }
+        return null;
+    }
+
+    public E set(int indx, E val){
+        if(indx < 0 || indx > size()){
+            throw new UserIndexOutOfBoundsException("index Invalid");
+        }
+        Node curr = head;
+
+        for(int i=1;i<indx;i++){
+            curr = curr.next;
+        }
+
+        curr.ele = val;
+    }
 }
 
 public class LinkedlistImplementation{
@@ -151,7 +221,16 @@ public class LinkedlistImplementation{
 
         // System.out.println(list.getFirst());
         // System.out.println(list.removeFirst());
-        list.add(3,5);
+        // list.add(3,5);
+        // System.out.println(list.remove(6));
+
+        UserLinkedList<Integer> list2 = new UserLinkedList<>();
+        list2.add(60);
+        list2.add(70);
+        list2.add(80);
+        System.out.println(list2);
+
+        list.addAll(list2);
         System.out.println(list);
     }
 }
