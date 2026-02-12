@@ -3,13 +3,13 @@ import java.util.Arrays;
 public class SentinalSearching {
 
     public static void main(String[] args) {
-        int[] arr = new int[20];
+        int[] arr = {4,6,8,29,9,47,2};
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = i + 1;
-        }
+        // for (int i = 0; i < arr.length; i++) {
+        //     arr[i] = i + 1;
+        // }
 
-        int key = 20;
+        int key = 2;
         System.out.println(Arrays.toString(arr));
         int pos1 = sentinalSearch(arr, arr.length, key);
         System.out.println(pos1);
@@ -17,16 +17,20 @@ public class SentinalSearching {
         System.out.println(pos2);
     }
 
+  
+
     public static int sentinalSearch(int[] arr, int n, int key) {
         int last = arr[n - 1];
         arr[n - 1] = key;
 
         int i = 0;
 
-        while (arr[i] != key)
+        while (arr[i] != key){
             i++;
+        }
+            
 
-        // arr[n - 1] = last;
+        arr[n - 1] = last; //!this step is optional
 
         if (i < n - 1 || last == key)
             return i;
