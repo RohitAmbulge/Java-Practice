@@ -1,20 +1,23 @@
 interface Add{
-    int add(int a, int b);
+    void add(int a, int b);
+    void subtract(int a, int b);
 }
 
 public class AnonymousInnerClass {
     public static void main(String[] args) {
-        // Add obj = new Add(){
-        //     public void add(int a, int b){
-        //         System.out.println(a+b);
-        //     }
-        // };
+        Add obj = new Add(){
+            public void add(int a, int b){
+                System.out.println(a+b);
+            }
 
-        // obj.add(6,7);
+            public void subtract(int a, int b){
+                System.out.println(a-b);
+            }
+        };
 
-        Add obj = (a,b)->a+b;
+        obj.add(6,7);
+        obj.subtract(5,3);
 
-        System.out.println(obj.add(2,4));
-        ;
+        
     }
 }

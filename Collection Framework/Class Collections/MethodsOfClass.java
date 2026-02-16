@@ -12,3 +12,11 @@ public class MethodsOfClass {
         System.out.println(Collections.binarySearch(list,7,null));
     }
 }
+
+
+
+
+
+
+
+
