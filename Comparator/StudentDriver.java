@@ -60,8 +60,10 @@ public class StudentDriver {
         // Collections.sort(list, new PercetComparator());
 
 
-        //Using Lambda
-        Collections.sort(list, (a, b)-> a.name.compare(b.name)); 
+        //Using Lambda -> name
+        // Collections.sort(list, (a, b)-> a.name.compareTo(b.name));
+
+        Collections.sort(list, (a,b)->a.age-b.age); 
         for(Student s : list){
             System.out.println(s);
         }
