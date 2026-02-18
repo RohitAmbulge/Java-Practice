@@ -27,7 +27,7 @@ class Student implements Comparable{
 
     public int compareTo(Student ref){
         return (this.per > ref.per)?-1:(this.per < ref.per)?1:0;
-        // return this.name.compareTo(ref.name);
+        return this.name.compareTo(ref.name);
     }
 
 }
