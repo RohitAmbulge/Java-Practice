@@ -186,7 +186,7 @@ class UserArrayList<E>{
         }
 
         index += c.size();
-
+ 
         return true;
 
     }
